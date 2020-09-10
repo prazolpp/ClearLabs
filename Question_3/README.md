@@ -1,1 +1,13 @@
-## THIS TOOL CAN BE USED TO TRANSLATE JSON IN ANY LANGUAGE TO ANY LANGUAGE OF YOUR CHOICE
+# JSON TRANSLATOR
+
+## Usage
+
+```
+node translate <json file> <language>
+```
+Please input the language with single quotes. For example: 
+
+```
+node translate input.json 'hi'
+
+```
