@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "7be54af2-28d7-473e-880b-960f7ce21b65",
+		"name": "ClearLabsInterview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8f6a629a-24bd-4bc3-bf74-b5c7caa6423b",
+						"exec": [
+							" pm.test(\"Check if latitude is 51.51 and longitude is -0.13\", function () {",
+							"    let responseJson = pm.response.json();",
+							"    let coord = responseJson.coord;",
+							"    pm.expect(coord.lat).to.equal(51.51);",
+							"    pm.expect(coord.lon).to.equal(-0.13)",
+							" });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22.",
+					"protocol": "https",
+					"host": [
+						"samples",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "London,uk"
+						},
+						{
+							"key": "appid",
+							"value": "b6907d289e10d714a6e88b30761fae22."
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
